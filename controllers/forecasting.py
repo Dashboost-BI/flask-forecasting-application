@@ -15,8 +15,6 @@ def time_series(df, predCol, dateCol, sample):
     df = df.asfreq('D')
     df = df.reset_index()
     df['y'] = df['y'].fillna(0)
-    print("==="*100)
-    print(df)
 
     m = Prophet()
     if sample == 'Daily':
